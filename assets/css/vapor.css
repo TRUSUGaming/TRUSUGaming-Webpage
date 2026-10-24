@@ -30,6 +30,20 @@ body.tg::before {
   z-index: 9999;
 }
 
+/* CRT colour-split glow on big headings */
+.tg-section-title,
+.tg-hero h1,
+.tg-ss-hero h1,
+.tg-banner h2 {
+  text-shadow: -2px 0 rgba(248, 0, 255, 0.7), 2px 0 rgba(0, 229, 255, 0.6), 0 0 18px rgba(248, 0, 255, 0.35);
+}
+/* gradient-filled words: use a filter instead so they stay crisp */
+.tg-hero h1 .tg-glow,
+.tg-ss-hero h1 span {
+  text-shadow: none;
+  filter: drop-shadow(-2px 0 rgba(0, 229, 255, 0.55)) drop-shadow(0 0 12px rgba(248, 0, 255, 0.45));
+}
+
 @media (prefers-reduced-motion: reduce) {
   .tg-hero::after { animation: none; }
 }

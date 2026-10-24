@@ -212,3 +212,32 @@ body.tg {
   .tg-hero .tg-cta { justify-content: center; }
   .tg-banner { text-align: center; padding: 32px 20px; }
 }
+
+/* ---------- Summer School pages ---------- */
+.tg-ss-hero { padding: 64px 16px 32px; text-align: center; }
+.tg-ss-hero h1 { font-weight: 800; font-size: clamp(2.2rem, 6vw, 3.8rem); line-height: 1.05; margin-bottom: 16px; }
+.tg-ss-hero .lead { color: rgba(255,255,255,0.85); max-width: 40rem; margin: 0 auto 28px; font-size: 1.15rem; }
+.tg-status {
+  display: inline-block; font-weight: 700; font-size: 13px; letter-spacing: 1.5px; text-transform: uppercase;
+  padding: 6px 14px; border-radius: 999px; background: rgba(248,0,255,0.2); border: 1px solid rgba(248,0,255,0.6);
+  color: var(--tg-pink-soft); margin-bottom: 18px;
+}
+.tg-speaker { text-align: center; }
+.tg-speaker .tg-avatar { width: 120px; height: 120px; font-size: 40px; border-width: 3px; box-shadow: 0 0 0 4px rgba(248,0,255,0.35), 0 10px 24px rgba(0,0,0,0.3); }
+.tg-speaker h3 { font-weight: 800; font-size: 1.15rem; margin: 18px 0 2px; }
+.tg-speaker .tg-org { color: var(--tg-sky); font-weight: 600; font-size: 14px; margin-bottom: 6px; }
+.tg-speaker p { color: rgba(255,255,255,0.8); font-size: 14px; margin-bottom: 0; }
+.tg-day { text-align: left; }
+.tg-day h3 { font-size: 1.1rem; margin-bottom: 14px; }
+.tg-day ul { list-style: none; padding: 0; margin: 0; }
+.tg-day li { padding: 7px 0; border-top: 1px solid rgba(255,255,255,0.1); color: rgba(255,255,255,0.85); font-size: 15px; }
+.tg-day li:first-child { border-top: 0; }
+.tg-tag { display: inline-block; font-size: 11px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; padding: 2px 8px; border-radius: 6px; margin-right: 6px; vertical-align: 1px; }
+.tg-tag-design { background: rgba(248,0,255,0.25); color: var(--tg-pink-soft); }
+.tg-tag-talk { background: rgba(0,155,254,0.25); color: var(--tg-sky); }
+.tg-tag-rt { background: rgba(255,255,255,0.15); color: #fff; }
+.tg-tag-social { background: rgba(255,200,0,0.2); color: #ffd966; }
+.tg-org-list { color: rgba(255,255,255,0.85); }
+.tg-org-list strong { color: #fff; }
+a.tg-card { display: block; color: #fff; text-decoration: none; }
+a.tg-card:hover { color: #fff; }

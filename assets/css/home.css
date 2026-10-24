@@ -1,0 +1,214 @@
+/* Shared styles for the refreshed TRUSU Gaming pages (home + board) */
+:root {
+  --tg-deep: #2a0f55;
+  --tg-purple: #650bbf;
+  --tg-pink: #f800ff;
+  --tg-pink-soft: #fbb5fe;
+  --tg-sky: #8bd2ff;
+  --tg-blue: #009bfe;
+  --tg-card: rgba(255, 255, 255, 0.07);
+  --tg-card-border: rgba(255, 255, 255, 0.14);
+}
+
+html:has(body.tg) { background: #2a0f55; }
+body.tg {
+  background: linear-gradient(180deg, #650bbf 0%, #3d1773 900px, #2a0f55 100%) #2a0f55;
+  color: #fff;
+  min-height: 100vh;
+}
+
+/* ---------- Hero ---------- */
+.tg-hero {
+  padding: 56px 16px 24px;
+}
+.tg-hero .container { max-width: 1140px; }
+.tg-eyebrow {
+  display: inline-block;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--tg-sky);
+  margin-bottom: 14px;
+}
+.tg-hero h1 {
+  font-weight: 800;
+  font-size: clamp(2.4rem, 6vw, 4.2rem);
+  line-height: 1.05;
+  margin-bottom: 18px;
+}
+.tg-hero h1 .tg-glow {
+  background: linear-gradient(90deg, var(--tg-pink), var(--tg-pink-soft));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.tg-hero .lead {
+  font-size: 1.2rem;
+  color: rgba(255, 255, 255, 0.85);
+  max-width: 34rem;
+  margin-bottom: 28px;
+}
+.tg-hero-img {
+  width: 100%;
+  max-width: 520px;
+  filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.35));
+}
+
+/* ---------- Buttons ---------- */
+.tg-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 700;
+  padding: 12px 22px;
+  border-radius: 999px;
+  text-decoration: none;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
+}
+.tg-btn:hover { transform: translateY(-2px); }
+.tg-btn-primary {
+  background: linear-gradient(90deg, var(--tg-pink), #ff6bff);
+  color: #fff;
+  box-shadow: 0 8px 24px rgba(248, 0, 255, 0.35);
+}
+.tg-btn-primary:hover { color: #fff; box-shadow: 0 12px 28px rgba(248, 0, 255, 0.5); }
+.tg-btn-ghost {
+  border: 2px solid rgba(255, 255, 255, 0.6);
+  color: #fff;
+}
+.tg-btn-ghost:hover { color: #fff; background: rgba(255, 255, 255, 0.1); }
+
+/* ---------- Sections ---------- */
+.tg-section { padding: 56px 16px; }
+.tg-section .container { max-width: 1140px; }
+.tg-section-title {
+  font-weight: 800;
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
+  margin-bottom: 8px;
+}
+.tg-section-sub {
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 1.1rem;
+  margin-bottom: 36px;
+}
+
+/* ---------- Feature cards ---------- */
+.tg-card {
+  height: 100%;
+  background: var(--tg-card);
+  border: 1px solid var(--tg-card-border);
+  border-radius: 20px;
+  padding: 30px 26px;
+  text-align: left;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+.tg-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(248, 0, 255, 0.6);
+}
+.tg-card-icon {
+  width: 54px;
+  height: 54px;
+  border-radius: 14px;
+  display: grid;
+  place-items: center;
+  font-size: 24px;
+  margin-bottom: 18px;
+  background: linear-gradient(135deg, var(--tg-pink), var(--tg-blue));
+  color: #fff;
+}
+.tg-card h3 {
+  font-weight: 800;
+  font-size: 1.35rem;
+  margin-bottom: 4px;
+}
+.tg-card .tg-when {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--tg-sky);
+  margin-bottom: 12px;
+}
+.tg-card p { color: rgba(255, 255, 255, 0.82); margin-bottom: 0; }
+
+/* ---------- Extra Life banner ---------- */
+.tg-banner {
+  border-radius: 24px;
+  padding: 40px 32px;
+  background: linear-gradient(110deg, rgba(248, 0, 255, 0.85), rgba(0, 155, 254, 0.85));
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
+  text-align: left;
+}
+.tg-banner h2 { font-weight: 800; font-size: clamp(1.6rem, 3.5vw, 2.2rem); }
+.tg-banner p { font-size: 1.1rem; margin-bottom: 0; color: rgba(255, 255, 255, 0.95); }
+.tg-banner .tg-btn { background: #fff; color: #3d1773; }
+.tg-banner .tg-btn:hover { color: #3d1773; }
+
+/* ---------- Pills (event examples) ---------- */
+.tg-pills { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px; }
+.tg-pill {
+  font-size: 13px;
+  font-weight: 600;
+  padding: 5px 12px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.12);
+  color: #fff;
+}
+
+/* ---------- Footer ---------- */
+.tg-footer {
+  padding: 40px 16px 32px;
+  color: rgba(255, 255, 255, 0.7);
+}
+.tg-footer .tg-social { display: flex; justify-content: center; gap: 18px; margin-bottom: 14px; }
+.tg-footer .tg-social a { color: rgba(255, 255, 255, 0.8); font-size: 22px; transition: color 0.15s; }
+.tg-footer .tg-social a:hover { color: var(--tg-pink-soft); }
+.tg-footer a.tg-mail { color: rgba(255, 255, 255, 0.8); }
+
+/* ---------- Board ---------- */
+.tg-person {
+  text-align: center;
+  padding: 0 12px;
+}
+.tg-avatar {
+  width: 170px;
+  height: 170px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid rgba(255, 255, 255, 0.85);
+  box-shadow: 0 0 0 6px rgba(248, 0, 255, 0.35), 0 16px 32px rgba(0, 0, 0, 0.3);
+}
+.tg-avatar-initials {
+  display: inline-grid;
+  place-items: center;
+  font-size: 56px;
+  font-weight: 800;
+  color: #fff;
+  background: linear-gradient(135deg, var(--tg-pink), var(--tg-blue));
+}
+.tg-person h3 { font-weight: 800; margin: 24px 0 2px; }
+.tg-handle { color: var(--tg-sky); font-weight: 600; margin-bottom: 6px; }
+.tg-role {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 700;
+  font-size: 13px;
+  color: var(--tg-pink-soft);
+  margin-bottom: 14px;
+}
+.tg-person .tg-bio { color: rgba(255, 255, 255, 0.85); max-width: 26rem; margin: 0 auto; }
+.tg-general {
+  border: 2px dashed rgba(255, 255, 255, 0.25);
+  border-radius: 20px;
+  padding: 36px 24px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+@media (max-width: 767px) {
+  .tg-hero { padding-top: 32px; text-align: center; }
+  .tg-hero .lead { margin-left: auto; margin-right: auto; }
+  .tg-hero .tg-cta { justify-content: center; }
+  .tg-banner { text-align: center; padding: 32px 20px; }
+}

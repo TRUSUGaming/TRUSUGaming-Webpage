@@ -1,0 +1,39 @@
+/* Vaporwave touches - load after home.css */
+
+/* Neon grid floor under the home page hero */
+.tg-hero { position: relative; overflow: hidden; padding-bottom: 200px; }
+.tg-hero .container { position: relative; z-index: 2; }
+.tg-hero::after {
+  content: "";
+  position: absolute;
+  left: -50%; right: -50%; bottom: -40px;
+  height: 200px;
+  background-image:
+    linear-gradient(rgba(255, 106, 213, 0.75) 2px, transparent 2px),
+    linear-gradient(90deg, rgba(0, 229, 255, 0.55) 2px, transparent 2px);
+  background-size: 60px 40px;
+  transform: perspective(260px) rotateX(62deg);
+  transform-origin: center top;
+  -webkit-mask-image: linear-gradient(to bottom, transparent 0%, #000 35%, #000 100%);
+          mask-image: linear-gradient(to bottom, transparent 0%, #000 35%, #000 100%);
+  animation: tg-grid-scroll 3s linear infinite;
+  z-index: 1;
+}
+@keyframes tg-grid-scroll { to { background-position: 0 40px, 0 0; } }
+
+/* Faint CRT scanlines over every page */
+body.tg::before {
+  content: "";
+  position: fixed; inset: 0;
+  background: repeating-linear-gradient(180deg, rgba(0, 0, 0, 0.12) 0 1px, transparent 1px 3px);
+  pointer-events: none;
+  z-index: 9999;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tg-hero::after { animation: none; }
+}
+@media (max-width: 767px) {
+  .tg-hero { padding-bottom: 150px; }
+  .tg-hero::after { height: 150px; }
+}
